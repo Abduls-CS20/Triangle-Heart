@@ -11,7 +11,7 @@ window.addEventListener("load", draw);
 
 function draw() {
   // Draw all GREY Triangles
-  ctx.fillStyle = "grey";
+  ctx.fillStyle = "green";
 
   ctx.beginPath();
   ctx.moveTo(0, 100);
@@ -57,4 +57,8 @@ function draw() {
 
   // Draw all YELLOW Triangles
   ctx.fillStyle = "yellow";
+}
+
+function makeTriangle(x1, y1, x2, y2, x3, y3){
+    
 }
