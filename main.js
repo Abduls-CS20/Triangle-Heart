@@ -11,54 +11,44 @@ window.addEventListener("load", draw);
 
 function draw() {
   // Draw all GREY Triangles
-  ctx.fillStyle = "green";
+  ctx.fillStyle = "grey"
 
-  ctx.beginPath();
-  ctx.moveTo(0, 100);
-  ctx.lineTo(100, 0);
-  ctx.lineTo(100, 100);
-  ctx.fill();
+  makeTriangle(0, 100, 100, 0, 100, 100)
+  makeTriangle(200, 100, 300, 0, 300, 100)
+  makeTriangle(100, 100, 100, 200, 200, 100)
+  makeTriangle(300, 100, 300, 200, 400, 200)
+  makeTriangle(100, 200, 100, 300, 200, 200)
+  makeTriangle(200, 300, 200, 400, 300, 300)
 
-  ctx.beginPath();
-  ctx.moveTo(200, 100);
-  ctx.lineTo(300, 0);
-  ctx.lineTo(300, 100);
-  ctx.fill();
-
-  ctx.beginPath();
-  ctx.moveTo(100, 100);
-  ctx.lineTo(100, 200);
-  ctx.lineTo(200, 100);
-  ctx.fill();
-
-  ctx.beginPath();
-  ctx.moveTo(300, 100);
-  ctx.lineTo(300, 200);
-  ctx.lineTo(400, 200);
-  ctx.fill();
-
-  ctx.beginPath();
-  ctx.moveTo(100, 200);
-  ctx.lineTo(100, 300);
-  ctx.lineTo(200, 200);
-  ctx.fill();
-
-  ctx.beginPath();
-  ctx.moveTo(200, 300);
-  ctx.lineTo(200, 400);
-  ctx.lineTo(300, 300);
-  ctx.fill();
 
   // Draw all PINK Triangles
   ctx.fillStyle = "pink";
+  makeTriangle(100, 0, 100, 100, 200, 100)
+  makeTriangle(0, 100, 0, 200, 100, 200)
+  makeTriangle(300, 100, 400, 100, 400, 200)
+  makeTriangle(100, 300, 200, 300, 200, 400)
+  makeTriangle(200, 200, 300, 200, 300, 300)
 
   // Draw all RED Triangles
   ctx.fillStyle = "red";
+  makeTriangle(0, 100, 100, 100, 100, 200)
+  makeTriangle(300, 0, 400, 100, 300, 100)
+  makeTriangle(200, 100, 300, 100, 200, 200)
+  makeTriangle(200, 200, 200, 300, 100, 300)
+  makeTriangle(300, 200, 300, 300, 400, 200)
 
   // Draw all YELLOW Triangles
   ctx.fillStyle = "yellow";
+  makeTriangle(200, 200, 200, 100, 100, 200)
+  makeTriangle(300, 100, 300, 200, 200, 200)
+  makeTriangle(200, 200, 200, 300, 300, 300)
+  makeTriangle(0, 200, 100, 200, 100, 300)
 }
 
 function makeTriangle(x1, y1, x2, y2, x3, y3){
-    
+  ctx.beginPath();
+  ctx.moveTo(x1, y1);
+  ctx.lineTo(x2, y2);
+  ctx.lineTo(x3, y3);
+  ctx.fill();
 }
